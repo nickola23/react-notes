@@ -1,0 +1,63 @@
+.notesMain{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.note{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+}
+.noteHeader{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.noteLogo{
+    width: 50px;
+    margin: 10px 0;
+}
+.noteTitle{
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+.noteClose{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.noteBody{
+    width: 100%;
+}
+.noteText{
+    width: 90%;
+    margin: 10px auto 20px auto;
+}
+.noteText:active, .noteText:focus{
+    border: none;
+    outline: none;
+}
+.addNote{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    text-align: center;
+    background-color: #282c34;
+    color: #61dafb;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+}
