@@ -14,6 +14,14 @@ function Note(props) {
             <div className="noteBody">
                 <p className='noteText' contentEditable="true" >{ props.text }</p>
             </div>
+            <div className="noteFooter">
+              <div className="noteStats">
+kjhgjkhg
+              </div>
+              <div className="noteDate">
+kjhjhg
+              </div>
+            </div>
         </div>
       </>
       
