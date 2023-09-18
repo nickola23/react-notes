@@ -4,16 +4,21 @@ import Note from './Note';
 import './notes.css';
 
 
-const [notes, setNotes] = useState([
-  {id: 0, title: "Title here", text: "Description goes here"}, 
-  {id: 1, title: "Title maybe", text: "Type whatever you want"}
-]);
-
-function Notes() {
-    
+export function DisplayNotes(){
+  const [notes, setNotes] = useState([
+    {id: 0, title: "Title here", text: "Description goes here"}, 
+    {id: 1, title: "Title maybe", text: "Type whatever you want"}
+  ]);
+  const addNote = () => {
+    const newNote = { id: notes.length + 1, title: 'Type here', text: 'and here' };
+    setNotes([...notes, newNote]);
   }
 
-export function DisplayNotes(){
+  const removeNote = (id) => {
+    const updatedNotes = notes.filter((note) => note.id !== id);
+    setNotes(updatedNotes);
+  };
+  
     return (
       <>
         <div className="notesMain">
@@ -24,9 +29,6 @@ export function DisplayNotes(){
         </div>
       </>
       );
+      
 }
 
-const addNote = () => {
-  const newNote = { id: notes.length + 1, title: 'Type here', text: 'and here' };
-  setNotes([...notes, newNote]);
-}
